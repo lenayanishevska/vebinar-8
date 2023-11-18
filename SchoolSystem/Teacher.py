@@ -18,3 +18,6 @@ class Teacher:
                     student.grades.append(grade)
                     return
         print(f"Error: {self.name} is not assigned to teach {subject.name} in any class.")
+
+    def __str__(self):
+        return f"Teacher {self.name} (ID: {self.teacher_id}) hired on {self.hire_date}."

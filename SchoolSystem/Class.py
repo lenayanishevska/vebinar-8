@@ -12,5 +12,11 @@ class SchoolClass:
         self.student_group = group
 
     def assign_teacher(self, teacher):
-        teacher.classes_taught.append(self)
-        self.teacher = teacher
+        if self.teacher:
+            print(f"Error: {self.name} already has a teacher.")
+        else:
+            self.teacher = teacher
+            teacher.classes_taught.append(self)
+    def __str__(self):
+        return f"School Class {self.name} (ID: {self.class_id}) at {self.designated_time}."
+

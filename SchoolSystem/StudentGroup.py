@@ -3,8 +3,9 @@ class StudentGroup:
         self.group_id = group_id
         self.students = []
 
-    def add_student_to_group(self, student):
-        self.students.append(student)
-
     def has_student(self, student):
         return student in self.students
+
+    def __str__(self):
+        return f"Student Group {self.group_id} with {len(self.students)} students."
+

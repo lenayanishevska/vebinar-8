@@ -13,3 +13,7 @@ class Student:
             for grade in self.grades:
                 print(f"Subject: {grade.subject.name}, Value: {grade.value}, "
                       f"Class: {grade.school_class.name}, Teacher: {grade.teacher.name}")
+
+    def __str__(self):
+        return f"Student {self.name} (ID: {self.student_id}) enrolled on {self.enrollment_date}."
+
